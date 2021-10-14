@@ -2,6 +2,7 @@
 
 ## For Developers
 * Get Started
+  * [Introduction](GetStarted/introduction.md)
   * [Setup development environment](GetStarted/Setup-development-environment.md)
 
 * Connector

@@ -13,18 +13,17 @@ As we have seen in the previous chapter we need three component in order to setu
 
 In this guide we will see how to setup the last two elements.
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have
 
-* Git
 * [Node.js](https://nodejs.org/)
 * [NPM](https://npmjs.com)
 * [Yarn](https://yarnpkg.com/)
 
 installed in your computer.
 
-### Setup Gateway
+## Setup Gateway
 
 First of all you should clone the repository 'gateway' either from the [Gitlab](https://gitlab.com/sibmip/gateway) or the [GitHub](https://github.com/HBPMedical/gateway).
 
@@ -44,7 +43,7 @@ After these steps you should be able to start the gateway in dev mode with the f
 npm run start:dev
 ```
 
-#### env.defaults 
+### env.defaults 
 There is a environment file that allows some configuration for the gateway.
 
 ```yaml
@@ -64,7 +63,7 @@ These parameters can be overwrite by either
 * Setting it `.env` file along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
 
-### Setup Frontend
+## Setup Frontend
 
 First of all you should clone the repository 'portal-frontend' either from the [Gitlab](https://gitlab.com/sibmip/portal-frontend) or the [GitHub](https://github.com/HBPMedical/portal-frontend).
 
@@ -78,7 +77,7 @@ git checkout dev
 yarn install
 ```
 
-#### environment file
+### environment file
 
 Make sure that the .env or .env.development contains the following information 
 
@@ -92,7 +91,7 @@ REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 * REACT_APP_GATEWAY_URL
   * Is used to connect with graphQL Gateway 
 
-#### start frontend
+### start frontend
 
 Depending branch you are working on, you can start the frontend with 
 
@@ -111,4 +110,4 @@ Each service could be launch at any time without respecting any specific order, 
 
 `Engine -> Gateway -> Frontend`
 
-If your are using `local` type in the Gateway you don't need to start the engine.
+If you are using `local` type in the Gateway you don't need to start the engine.

@@ -8,7 +8,7 @@ The MIP is mainly composed by 3 components
 
 * Frontend : user interface
 * Gateway : middleware used to abstract calls from an engine
-* Engine : An API to a concrete engine (Datashield, Exareme, etc...)
+* Engine : an API to a concrete engine (Datashield, Exareme, etc...)
 
 ## Overview 
 The Frontend and the Gateway are closely related but their communication are abstracted from the engine. This abstraction is performed by the Gateway.

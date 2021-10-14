@@ -15,7 +15,7 @@ The Frontend and the Gateway are closely related but their communication are abs
 
 ![](../.gitbook/assets/overview.png)
 
-The Gateway is in charge of communications with various Engines, it could make simple calls and pass it to the frontend or make any transformations needed in order to fit the needed format in the frontend.
+The Gateway is in charge of communications with various engines, it could make simple calls and pass it to the frontend or make any transformations needed in order to fit the needed format in the frontend.
 
 ### GraphQL
 

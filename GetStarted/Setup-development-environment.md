@@ -4,7 +4,7 @@ description: Developer guide to setup a development environment
 
 This guide is used to setup a full development environment for the MIP Front dev. 
 
-## 
+## introduction 
 As we have seen in the previous chapter we need three component in order to setup the MIP:
 
 * Engine

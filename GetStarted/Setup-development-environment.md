@@ -2,9 +2,12 @@
 description: Developer guide to setup a development environment
 ---
 
-This guide is used to setup a full development environment for the MIP Front dev. 
+# Setup development environment
 
-## introduction 
+This guide is used to setup a full development environment for the MIP Front dev.
+
+### Introduction
+
 As we have seen in the previous chapter we need three component in order to setup the MIP:
 
 * Engine
@@ -13,17 +16,17 @@ As we have seen in the previous chapter we need three component in order to setu
 
 In this guide we will see how to setup the last two elements.
 
-## Prerequisites
+### Prerequisites
 
 Make sure you have
 
-* [Node.js](https://nodejs.org/)
+* [Node.js](https://nodejs.org)
 * [NPM](https://npmjs.com)
-* [Yarn](https://yarnpkg.com/)
+* [Yarn](https://yarnpkg.com)
 
 installed in your computer.
 
-## Setup Gateway
+### Setup Gateway
 
 First of all you should clone the repository 'gateway' either from the [Gitlab](https://gitlab.com/sibmip/gateway) or the [GitHub](https://github.com/HBPMedical/gateway).
 
@@ -37,13 +40,14 @@ git checkout develop
 npm install
 ```
 
-After these steps you should be able to start the gateway in dev mode with the following command 
+After these steps you should be able to start the gateway in dev mode with the following command
 
 ```bash
 npm run start:dev
 ```
 
-### env.defaults 
+#### env.defaults
+
 There is a environment file that allows some configuration for the gateway.
 
 ```yaml
@@ -59,11 +63,12 @@ GATEWAY_PORT=8081
 * GATEWAY_PORT
   * Indicate the port for the Gateway.
 
-These parameters can be overwrite by either 
+These parameters can be overwrite by either
+
 * Setting it `.env` file along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
 
-## Setup Frontend
+### Setup Frontend
 
 First of all you should clone the repository 'portal-frontend' either from the [Gitlab](https://gitlab.com/sibmip/portal-frontend) or the [GitHub](https://github.com/HBPMedical/portal-frontend).
 
@@ -77,11 +82,11 @@ git checkout dev
 yarn install
 ```
 
-### environment file
+#### environment file
 
-Make sure that the .env or .env.development contains the following information 
+Make sure that the .env or .env.development contains the following information
 
-```yaml 
+```yaml
 REACT_APP_BACKEND_URL=http://127.0.0.1:8081
 REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 ```
@@ -89,23 +94,24 @@ REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 * REACT_APP_BACKEND_URL
   * Is used to consume REST API call (migration to GraphQL is in progress)
 * REACT_APP_GATEWAY_URL
-  * Is used to connect with graphQL Gateway 
+  * Is used to connect with graphQL Gateway
 
-### start frontend
+#### start frontend
 
-Depending branch you are working on, you can start the frontend with 
+Depending branch you are working on, you can start the frontend with
 
 ```bash
 yarn start
 ```
 
-or 
+or
 
 ```bash
 yarn watch
 ```
 
-## Launch order
+### Launch order
+
 Each service could be launch at any time without respecting any specific order, however as the frontend (react app) open automatically a browser tab for the local dev, it is recommended to follow this launch order
 
 `Engine -> Gateway -> Frontend`

@@ -1,12 +1,13 @@
-# Table of contents 
+# Table of contents
+
+* [README](README.md)
 
 ## For Developers
-* Get Started
+
+* [Get Started](for-developers/get-started/README.md)
   * [Introduction](GetStarted/Introduction.md)
   * [Setup development environment](GetStarted/Setup-development-environment.md)
-
-* Connector
+* [Connector](for-developers/connector/README.md)
   * [Parsing response with JSONdata](Gateway/Connector/Parsing-response-with-JSONata.md)
-
-* Frontend
+* [Frontend](for-developers/frontend/README.md)
   * [Update GraphQL Queries](Frontend/Update-queries-GrahpQL-in-the-frontend.md)

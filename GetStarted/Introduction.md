@@ -2,8 +2,6 @@
 description: Introduction for developers
 ---
 
-
-## Introduction
 The MIP is mainly composed by 3 components 
 
 ![](../.gitbook/assets/components.drawio.png)
@@ -17,7 +15,7 @@ The Frontend and the Gateway are closely related but their communication are abs
 
 ![](../.gitbook/assets/overview.png)
 
-The Gateway is in charge of communications with the various Engines, it could just make simple calls and pass it to the frontend or make any transformations needed in order to fit the needed format to the frontend.
+The Gateway is in charge of communications with various Engines, it could make simple calls and pass it to the frontend or make any transformations needed in order to fit the needed format in the frontend.
 
 ### GraphQL
 
@@ -48,9 +46,12 @@ export default class DatashieldService implements IEngineService {
 
 The code above is an example of a connector.
 
-### Front
-With the frontend we will introduce a new way to deal with visualizations. Previously the visualizations were completely manage by the Engine. As a part of abstraction from a specific engine we want to be able to delegate this task to the visualization components.
-
-The main idea is to build various generalist visualization component (BarChart, HeatMap, DataTable, etc...) that every analytic engine can either feed directly or adapted by the Gateway to fit the frontend needs.
+### Visualizations
 
 ![](../.gitbook/assets/visualizations.png)
+
+With the frontend we will introduce a new way to deal with visualizations. Previously the visualizations were completely manage by the engine. As a part of abstraction from a specific engine we want to be able to delegate this task to the visualization components.
+
+The main idea is to build various generalist visualization components (BarChart, HeatMap, DataTable, etc...) that every analytic engine can either feed directly or adapted by the Gateway to fit the frontend needs.
+
+

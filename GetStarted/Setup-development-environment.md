@@ -6,7 +6,7 @@ description: Developer guide to setup a development environment
 
 This guide is used to setup a full development environment for the MIP Front dev.
 
-### Introduction
+## Introduction
 
 As we have seen in the previous chapter we need three component in order to setup the MIP:
 
@@ -26,7 +26,7 @@ Make sure you have
 
 installed in your computer.
 
-### Setup Gateway
+## Setup Gateway
 
 First of all you should clone the repository 'gateway' either from the [Gitlab](https://gitlab.com/sibmip/gateway) or the [GitHub](https://github.com/HBPMedical/gateway).
 
@@ -46,7 +46,7 @@ After these steps you should be able to start the gateway in dev mode with the f
 npm run start:dev
 ```
 
-#### env.defaults
+### env.defaults
 
 There is a environment file that allows some configuration for the gateway.
 
@@ -68,7 +68,7 @@ These parameters can be overwrite by either
 * Setting it `.env` file along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
 
-### Setup Frontend
+## Setup Frontend
 
 First of all you should clone the repository 'portal-frontend' either from the [Gitlab](https://gitlab.com/sibmip/portal-frontend) or the [GitHub](https://github.com/HBPMedical/portal-frontend).
 
@@ -82,7 +82,7 @@ git checkout dev
 yarn install
 ```
 
-#### environment file
+### Environment file
 
 Make sure that the .env or .env.development contains the following information
 
@@ -96,7 +96,7 @@ REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 * REACT_APP_GATEWAY_URL
   * Is used to connect with graphQL Gateway
 
-#### start frontend
+### Start frontend
 
 Depending branch you are working on, you can start the frontend with
 
@@ -110,7 +110,7 @@ or
 yarn watch
 ```
 
-### Launch order
+## Launch order
 
 Each service could be launch at any time without respecting any specific order, however as the frontend (react app) open automatically a browser tab for the local dev, it is recommended to follow this launch order
 

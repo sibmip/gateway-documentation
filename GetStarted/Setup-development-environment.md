@@ -56,17 +56,27 @@ ENGINE_BASE_URL=http://127.0.0.1:8080/services/
 GATEWAY_PORT=8081
 ```
 
-* ENGINE_TYPE
+* ENGINE\_TYPE
   * Allow you to choose which connector you want to load, `local` is used for dev purpose and is not intended to be used in production.
-* ENGINE_BASE_URL
+* ENGINE\_BASE\_URL
   * Indicate the endpoint for the engine, this parameter can be retrieve in the connector side. If you are using `local` connector this parameter is not useful
-* GATEWAY_PORT
+* GATEWAY\_PORT
   * Indicate the port for the Gateway.
 
 These parameters can be overwrite by either
 
 * Setting it `.env` file along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
+
+### GraphQL Playground
+
+Once you have start the Gateway, you can play with the GraphQL playground that is automatically integrated within the gateway, follow this link : [http://127.0.0.1:8081/graphql](http://127.0.0.1:8081/graphql). You should be able to see something like this :
+
+![GraphQL Playground](../.gitbook/assets/image.png)
+
+This environment is a sandbox provided by GraphQL to play with queries, mutations, etc...
+
+It allows you to see schema defined in the backend and endpoints that you can calls.
 
 ## Setup Frontend
 
@@ -91,9 +101,9 @@ REACT_APP_BACKEND_URL=http://127.0.0.1:8081
 REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 ```
 
-* REACT_APP_BACKEND_URL
+* REACT\_APP\_BACKEND\_URL
   * Is used to consume REST API call (migration to GraphQL is in progress)
-* REACT_APP_GATEWAY_URL
+* REACT\_APP\_GATEWAY\_URL
   * Is used to connect with graphQL Gateway
 
 ### Start frontend

@@ -63,14 +63,14 @@ GATEWAY_PORT=8081
 * GATEWAY\_PORT
   * Indicate the port for the Gateway.
 
-These parameters can be overwrite by either
+These parameters can be overwrite by either :
 
-* Setting it `.env` file along with the file .env.defaults in the root folder
+* setting the variable in `.env` file (you can create it if it does not exist) along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
 
 ### GraphQL Playground
 
-Once you have start the Gateway, you can play with the GraphQL playground that is automatically integrated within the gateway, follow this link : [http://127.0.0.1:8081/graphql](http://127.0.0.1:8081/graphql). You should be able to see something like this :
+Once you have started the Gateway, you can play with the GraphQL playground that is automatically integrated within the gateway, follow this link : [http://127.0.0.1:8081/graphql](http://127.0.0.1:8081/graphql). You should be able to see something like this :
 
 ![GraphQL Playground](../.gitbook/assets/image.png)
 
@@ -104,11 +104,11 @@ REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 * REACT\_APP\_BACKEND\_URL
   * Is used to consume REST API call (migration to GraphQL is in progress)
 * REACT\_APP\_GATEWAY\_URL
-  * Is used to connect with graphQL Gateway
+  * Is used to connect with GraphQL Gateway
 
 ### Start frontend
 
-Depending branch you are working on, you can start the frontend with
+Depending the branch you are working on, you can start the frontend with
 
 ```bash
 yarn start

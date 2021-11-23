@@ -1,13 +1,14 @@
-# Introduction 
+# Parsing response with JSONdata
 
-This page is dedicated to talk about the transformation of JSON data to fit the Gateway needs
+This page is dedicated to talk about the transformation of JSON data to fit the Gateway needs.
 
-Most of the work done by the gateway is about transformation. The data receive by the engines is transformed in a way that could be consume by the front-end. This is a lot of work when adapting an old engine, most of the work can be achieve in JS/TS but it can be really time consuming and most of the time the code for data transformation is not really readable. 
+Most of the work done by the gateway is about transformation. The data receive by the engine is transformed in a way that could be consume by the front-end. There is a lot of work when adapting an old engine, most of the work can be achieve in JS/TS but it can be really time consuming and most of the time the code for data transformation is not really readable.
 
 For this purpose we suggest to use a library to transform the data (JSON in that case) to fit the Gateway's models.
 
 ## JSONata
-In order to simplify the transformation of JSON data, we choose the library [JSONata](https://jsonata.org/) to do this work. JSONata is :
+
+In order to simplify the transformation of JSON data, we choose the library [JSONata](https://jsonata.org) to do this work. JSONata is :
 
 * Lightweight query and transformation language for JSON data
 * Inspired by the location path semantics of XPath 3.1
@@ -16,11 +17,12 @@ In order to simplify the transformation of JSON data, we choose the library [JSO
 * Create user-defined functions
 * Format query results into any JSON output structure
 
-It makes the transformation really easy to do, more readable and thus maintainable. 
+It makes the transformation really easy to do, more readable and thus maintainable.
 
-### Example 
+### Example
 
-File _transformation.ts_ 
+File _transformation.ts_
+
 ```ts
 import * as jsonata from 'jsonata';
 
@@ -30,6 +32,7 @@ export const expression = jsonata(`
 ```
 
 File _converter.ts_
+
 ```ts
 import { expression } from './transformations';
 
@@ -79,9 +82,8 @@ const data = `
 const value: SOME_TYPE = expression.evaluate(data);
 
 console.log(value);
-
 ```
 
 ### Conception / Debugging
-You can try your transformations and debug your jsonata directly with the online tool :
-https://try.jsonata.org/
+
+You can try transformations and debug jsonata directly with the online tool : [https://try.jsonata.org](https://try.jsonata.org).

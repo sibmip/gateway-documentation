@@ -18,7 +18,7 @@ In this guide we will see how to setup the last two elements.
 
 ### Prerequisites
 
-Make sure you have
+Make sure to have
 
 * [Node.js](https://nodejs.org)
 * [NPM](https://npmjs.com)
@@ -28,7 +28,7 @@ installed in your computer.
 
 ## Setup Gateway
 
-First of all you should clone the repository 'gateway' either from the [Gitlab](https://gitlab.com/sibmip/gateway) or the [GitHub](https://github.com/HBPMedical/gateway).
+First of all you should clone the repository 'gateway' either from the [Gitlab](https://gitlab.com/sibmip/gateway) or from the [GitHub](https://github.com/HBPMedical/gateway).
 
 Once the pull is completed, you can make the following commands
 
@@ -48,7 +48,7 @@ npm run start:dev
 
 ### env.defaults
 
-There is a environment file that allows some configuration for the gateway.
+There is an environment file that allows some configuration for the gateway.
 
 ```yaml
 ENGINE_TYPE=local
@@ -57,15 +57,15 @@ GATEWAY_PORT=8081
 ```
 
 * ENGINE\_TYPE
-  * Allow you to choose which connector you want to load, `local` is used for dev purpose and is not intended to be used in production.
+  * Allows you to choose which connector you want to load, `local` is used for development purpose and is not intended to be used in production.
 * ENGINE\_BASE\_URL
-  * Indicate the endpoint for the engine, this parameter can be retrieve in the connector side. If you are using `local` connector this parameter is not useful
+  * Indicate the endpoint for the engine, this parameter can be retrieve in the connector side. If you are using `local` connector this parameter is not useful.
 * GATEWAY\_PORT
   * Indicate the port for the Gateway.
 
 These parameters can be overwrite by either :
 
-* setting the variable in `.env` file (you can create it if it does not exist) along with the file .env.defaults in the root folder
+* setting a variable in `.env` file (you can create it if it does not exist) along with the file .env.defaults in the root folder
 * or setting an environment variable on your system
 
 ### GraphQL Playground
@@ -74,7 +74,7 @@ Once you have started the Gateway, you can play with the GraphQL playground that
 
 ![GraphQL Playground](../.gitbook/assets/image.png)
 
-This environment is a sandbox provided by GraphQL to play with queries, mutations, etc...
+This environment is a tool provided by GraphQL to play with queries, mutations, etc...
 
 It allows you to see schema defined in the backend and endpoints that you can calls.
 
@@ -108,7 +108,7 @@ REACT_APP_GATEWAY_URL=$REACT_APP_BACKEND_URL/graphql
 
 ### Start frontend
 
-Depending the branch you are working on, you can start the frontend with
+Depending the branch you are working on, you can start the Frontend with
 
 ```bash
 yarn start
@@ -122,7 +122,7 @@ yarn watch
 
 ## Launch order
 
-Each service could be launch at any time without respecting any specific order, however as the frontend (react app) open automatically a browser tab for the local dev, it is recommended to follow this launch order
+Each service could be launch at any time without respecting any specific order, however as the Frontend (react app) open automatically a browser tab for the local development, it is recommended to follow this launch order
 
 `Engine -> Gateway -> Frontend`
 
